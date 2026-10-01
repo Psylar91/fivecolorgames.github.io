@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="200 196 620 368" role="img" aria-label="FiveColorGames">
+  <g fill="#03263f" stroke="#03263f" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M214 415 L390 355" fill="none" stroke-width="7"/>
+    <path d="M458 219 L264 539 L652 539 Z" stroke-width="13"/>
+  </g>
+  <g stroke-linejoin="round" stroke-width="6">
+    <path d="M391 355 L803 228 L803 276 Z" fill="#d93a36" stroke="#d93a36"/>
+    <path d="M391 355 L803 291 L803 341 Z" fill="#ffba2a" stroke="#ffba2a"/>
+    <path d="M391 355 L803 356 L803 407 Z" fill="#338e53" stroke="#338e53"/>
+    <path d="M391 355 L803 422 L803 480 Z" fill="#1c89c6" stroke="#1c89c6"/>
+    <path d="M391 355 L803 493 L803 550 Z" fill="#2e4990" stroke="#2e4990"/>
+  </g>
+</svg>

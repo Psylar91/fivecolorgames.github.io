@@ -32,6 +32,7 @@ GAME_ICONS = {
     "applegameplus": (f"{UNITY}/AppleGamePlus/Assets/@Resources/adaptive_icon_background.png",
                       f"{UNITY}/AppleGamePlus/Assets/@Resources/adaptive_icon_foreground.png"),
     "mallangpang": (f"{UNITY}/Match2/docs/store/icon_512.png",),
+    "mallangdoku": (f"{UNITY}/Mallangdoku/docs/store/icon_512.png",),
 }
 
 

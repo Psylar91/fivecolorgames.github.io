@@ -8,6 +8,7 @@
 - 회사 로고 원본: tools/source/logo.png(1024×1024, 크림색 배경)
 - 로고 마크 SVG: assets/img/logo-mark.svg(원본을 보고 손으로 옮긴 벡터). favicon.svg는 이 파일로 만든다.
 - 게임 아이콘 원본은 각 게임 저장소에 있다(GAME_ICONS). 저장소가 없으면 그 아이콘은 건너뛴다.
+  Pet Pens 아이콘은 스토어 아이콘(512px)을 tools/source/petpens_icon.png로 복사해 둔 것을 쓴다.
 """
 import os
 import re
@@ -33,6 +34,7 @@ GAME_ICONS = {
                       f"{UNITY}/AppleGamePlus/Assets/@Resources/adaptive_icon_foreground.png"),
     "mallangpang": (f"{UNITY}/Match2/docs/store/icon_512.png",),
     "mallangdoku": (f"{UNITY}/Mallangdoku/docs/store/icon_512.png",),
+    "petpens": (os.path.join(ROOT, "tools", "source", "petpens_icon.png"),),
 }
 
 

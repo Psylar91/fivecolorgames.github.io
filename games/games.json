@@ -1,0 +1,6 @@
+[
+{"id": "petpens", "package": "com.fivecolorgames.petpens", "name": {"ko": "Pet Pens", "en": "Pet Pens"}, "tagline": {"ko": "숫자만큼 칸을 묶어 동물마다 우리를 지어 주는 논리 퍼즐", "en": "Build a pen for every animal in this cute logic puzzle."}},
+{"id": "mallangdoku", "package": "com.fivecolorgames.mallangdoku", "name": {"ko": "말랑도쿠", "en": "Mallangdoku"}, "tagline": {"ko": "줄마다, 색마다 동물 한 마리! 말랑말랑 논리 퍼즐", "en": "One animal per row, column and color. A cute logic puzzle."}},
+{"id": "mallangpang", "package": "com.fivecolorgames.mallangfriends", "name": {"ko": "말랑팡", "en": "Mallang Pang"}, "tagline": {"ko": "같은 색 동물 블록을 탭해서 팡! 귀여운 블록 퍼즐", "en": "Tap matching animal blocks to pop them! A cute blast puzzle."}},
+{"id": "applegameplus", "package": "com.fivecolorgames.applegameplus", "name": {"ko": "이상한 사과게임", "en": "The Weird Apple Game"}, "tagline": {"ko": "더하고, 빼고, 곱하고, 나누는 5가지 모드의 사과게임", "en": "The apple game with five modes: add, subtract, multiply and divide."}}
+]

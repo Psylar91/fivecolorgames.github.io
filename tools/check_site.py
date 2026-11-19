@@ -6,8 +6,10 @@
 - 개인정보처리방침에 `{EFFECTIVE_DATE}` 같은 자리 표시가 남지 않았는지
 - mailto 주소가 정식 주소인지
 - app-ads.txt가 사이트 최상위에 있는지
+- games/games.json(게임 목록 페이지 데이터)의 항목마다 필수 칸, 패키지 형식, 아이콘·방침 파일이 있는지
 문제가 있으면 종료 코드 1을 돌려준다.
 """
+import json
 import os
 import re
 import sys
@@ -49,6 +51,36 @@ def target_file(page, url_path):
     return os.path.normpath(p)
 
 
+def check_games(errors):
+    path = os.path.join(ROOT, "games", "games.json")
+    if not os.path.exists(path):
+        return
+    try:
+        games = json.load(open(path, encoding="utf-8"))
+    except ValueError as e:
+        errors.append(f"games/games.json: invalid JSON ({e})")
+        return
+    seen = set()
+    for i, g in enumerate(games):
+        where = f"games/games.json[{i}]"
+        gid = g.get("id", "")
+        if not re.fullmatch(r"[a-z0-9]+", gid):
+            errors.append(f"{where}: bad id {gid!r}")
+            continue
+        if gid in seen:
+            errors.append(f"{where}: duplicate id {gid}")
+        seen.add(gid)
+        if not re.fullmatch(r"[a-z][a-z0-9_]*(\.[a-z][a-z0-9_]*)+", g.get("package", "")):
+            errors.append(f"{where}: bad package {g.get('package')!r}")
+        for key in ("name", "tagline"):
+            for lang in ("ko", "en"):
+                if not str((g.get(key) or {}).get(lang, "")).strip():
+                    errors.append(f"{where}: missing {key}.{lang}")
+        for rel in (f"assets/img/games/{gid}.webp", f"{gid}/privacy.html"):
+            if not os.path.exists(os.path.join(ROOT, rel)):
+                errors.append(f"{where}: missing {rel}")
+
+
 def main():
     pages = []
     for dirpath, dirs, files in os.walk(ROOT):
@@ -85,6 +117,8 @@ def main():
     ads = os.path.join(ROOT, "app-ads.txt")
     if not os.path.exists(ads) or "pub-" not in open(ads, encoding="utf-8").read():
         errors.append("app-ads.txt missing or empty")
+
+    check_games(errors)
 
     for e in errors:
         print("ERROR", e)

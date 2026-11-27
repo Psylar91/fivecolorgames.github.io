@@ -1,4 +1,5 @@
 [
+{"id": "bellyflop", "package": "com.fivecolorgames.bellyflop", "name": {"ko": "펭귄 퐁당", "en": "Belly Flop Penguins"}, "tagline": {"ko": "펭귄을 톡 누르면 바다로 퐁당! 순서를 잘 고르는 빙하 퍼즐", "en": "Tap a penguin to slide it into the sea! Pick the right order."}},
 {"id": "petpens", "package": "com.fivecolorgames.petpens", "name": {"ko": "Pet Pens", "en": "Pet Pens"}, "tagline": {"ko": "숫자만큼 칸을 묶어 동물마다 우리를 지어 주는 논리 퍼즐", "en": "Build a pen for every animal in this cute logic puzzle."}},
 {"id": "mallangdoku", "package": "com.fivecolorgames.mallangdoku", "name": {"ko": "말랑도쿠", "en": "Mallangdoku"}, "tagline": {"ko": "줄마다, 색마다 동물 한 마리! 말랑말랑 논리 퍼즐", "en": "One animal per row, column and color. A cute logic puzzle."}},
 {"id": "mallangpang", "package": "com.fivecolorgames.mallangfriends", "name": {"ko": "말랑팡", "en": "Mallang Pang"}, "tagline": {"ko": "같은 색 동물 블록을 탭해서 팡! 귀여운 블록 퍼즐", "en": "Tap matching animal blocks to pop them! A cute blast puzzle."}},
